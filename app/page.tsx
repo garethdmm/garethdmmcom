@@ -11,7 +11,7 @@ export default function Home() {
           Gareth MacLeod
         </span>
         <nav>
-          <Link href="/blog/first-post">Writing</Link>
+          <Link href="/blog/how-to-feel-when-your-startup-feels-easy">Writing</Link>
         </nav>
       </header>
 
@@ -64,12 +64,6 @@ export default function Home() {
                 How to feel when your startup feels easy
               </Link>
               <span className="post-meta">Mar 2024</span>
-            </li>
-            <li style={{ marginBottom: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '1rem', flexWrap: 'wrap' }}>
-              <Link href="/blog/first-post">
-                On the Gap Between Formal Models and Real Systems
-              </Link>
-              <span className="post-meta">Feb 2026</span>
             </li>
           </ul>
         </section>
