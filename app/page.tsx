@@ -57,17 +57,17 @@ export default function Home() {
             Writing
           </h2>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-            <li style={{ marginBottom: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '1rem', flexWrap: 'wrap' }}>
-              <Link href="/blog/how-to-feel-when-your-startup-feels-easy">
+            <li style={{ marginBottom: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '1rem' }}>
+              <Link href="/blog/how-to-feel-when-your-startup-feels-easy" style={{ flex: 1 }}>
                 How to feel when your startup feels easy
               </Link>
-              <span className="post-meta">Mar 2024</span>
+              <span className="post-meta" style={{ flexShrink: 0 }}>Mar 2024</span>
             </li>
-            <li style={{ marginBottom: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '1rem', flexWrap: 'wrap' }}>
-              <Link href="/blog/surviving-five-years-in-the-most-dangerous-market">
-                How we survived five years in the most dangerous market in the world
+            <li style={{ marginBottom: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '1rem' }}>
+              <Link href="/blog/surviving-five-years-in-the-most-dangerous-market" style={{ flex: 1 }}>
+                Thriving in the presence of risk — Crypto 2013–17
               </Link>
-              <span className="post-meta">Aug 2019</span>
+              <span className="post-meta" style={{ flexShrink: 0 }}>Aug 2019</span>
             </li>
           </ul>
         </section>

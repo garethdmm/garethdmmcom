@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'How we survived five years in the most dangerous market in the world — Gareth MacLeod',
+  title: 'Thriving in the presence of risk — Crypto 2013–17 — Gareth MacLeod',
 };
 
 export default function SurvivingFiveYearsPost() {
@@ -24,7 +24,7 @@ export default function SurvivingFiveYearsPost() {
         </Link>
 
         <h1 style={{ marginTop: 0, fontSize: '1.75rem', lineHeight: 1.25, marginBottom: '0.4rem' }}>
-          How we survived five years in the most dangerous market in the world
+          Thriving in the presence of risk — Crypto 2013–17
         </h1>
         <p className="post-meta" style={{ marginBottom: '2rem' }}>August 2019</p>
 
