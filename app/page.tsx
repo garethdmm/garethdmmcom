@@ -31,7 +31,7 @@ export default function Home() {
           <div style={{ flex: 1, minWidth: 220 }}>
             <h1 style={{ marginTop: 0, fontSize: '1.4rem' }}>Gareth MacLeod</h1>
             <p style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontSize: '0.88rem', color: '#555', marginBottom: '0.75rem' }}>
-              Associate Professor of Computer Science · State University
+              Founder & Engineer
             </p>
             <p>
               I study distributed systems and programming language theory. My current work focuses on
@@ -42,11 +42,9 @@ export default function Home() {
               how I think about the gap between theory and the systems people actually build.
             </p>
             <p style={{ fontSize: '0.88rem', fontFamily: 'system-ui, -apple-system, sans-serif', color: '#555' }}>
-              <a href="mailto:jane@example.com">email</a>
+              <a href="https://github.com/garethdmm" target="_blank">github</a>
               {' · '}
-              <a href="#">github</a>
-              {' · '}
-              <a href="#">google scholar</a>
+              <a href="https://www.linkedin.com/in/garethmacleod/" target="_blank">linkedin</a>
             </p>
           </div>
         </div>
