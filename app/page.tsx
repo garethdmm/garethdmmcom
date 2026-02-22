@@ -63,6 +63,12 @@ export default function Home() {
               </Link>
               <span className="post-meta">Mar 2024</span>
             </li>
+            <li style={{ marginBottom: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '1rem', flexWrap: 'wrap' }}>
+              <Link href="/blog/surviving-five-years-in-the-most-dangerous-market">
+                How we survived five years in the most dangerous market in the world
+              </Link>
+              <span className="post-meta">Aug 2019</span>
+            </li>
           </ul>
         </section>
       </main>
