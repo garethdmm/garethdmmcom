@@ -31,15 +31,13 @@ export default function Home() {
           <div style={{ flex: 1, minWidth: 220 }}>
             <h1 style={{ marginTop: 0, fontSize: '1.4rem' }}>Gareth MacLeod</h1>
             <p style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontSize: '0.88rem', color: '#555', marginBottom: '0.75rem' }}>
-              Founder & Engineer
+              Founder • Engineer • Waterloo, ON
             </p>
             <p>
-              I study distributed systems and programming language theory. My current work focuses on
-              formal verification of concurrent protocols and making those ideas accessible to practitioners.
+              I've been building startups since 2010—my own and others—to varying degrees of success. Presently I'm head of engineering at <a href='https://invertbio.com/' target='_blank'>Invert</a>, where we're building AI that can solve bioprocess development.
             </p>
             <p>
-              Before academia I spent several years writing infrastructure software, which still shapes
-              how I think about the gap between theory and the systems people actually build.
+              My career motto is <i>do what others are not</i>.
             </p>
             <p style={{ fontSize: '0.88rem', fontFamily: 'system-ui, -apple-system, sans-serif', color: '#555' }}>
               <a href="https://github.com/garethdmm" target="_blank">github</a>
