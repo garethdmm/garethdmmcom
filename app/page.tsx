@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -9,33 +8,23 @@ export default function Home() {
       <main>
         {/* Masthead */}
         <div style={{ marginBottom: '2rem' }}>
-          <h1 style={{ marginTop: 0, marginBottom: 0, fontSize: '1.4rem', display: 'inline' }}>Gareth MacLeod</h1>
-          <span style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontSize: '0.95rem', color: '#888', margin: '0 0.5rem' }}>—</span>
-          <span style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontSize: '0.95rem', color: '#888' }}>Founder • Engineer • Waterloo, ON</span>
+          <h1 style={{ marginTop: 0, marginBottom: '0.25rem', fontSize: '1.4rem' }}>Gareth MacLeod</h1>
+          <p style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontSize: '0.88rem', color: '#555', margin: 0 }}>Founder • Engineer • Waterloo, ON</p>
         </div>
 
-        {/* Photo + Bio */}
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem', marginBottom: '2.5rem', flexWrap: 'wrap' }}>
-          <Image
-            src="/me.png"
-            alt="Profile photo"
-            width={120}
-            height={120}
-            style={{ borderRadius: '50%', flexShrink: 0, objectFit: 'cover' }}
-          />
-          <div style={{ flex: 1, minWidth: 220 }}>
-            <p style={{ marginTop: 0 }}>
-              I've been building startups since 2010—my own and others—to varying degrees of success. Presently I'm head of engineering at <a href='https://invertbio.com/' target='_blank'>Invert</a>, where we're building AI that can solve bioprocess development.
-            </p>
-            <p>
-              My career motto is <i>do what others are not</i>.
-            </p>
-            <p style={{ fontSize: '0.88rem', fontFamily: 'system-ui, -apple-system, sans-serif', color: '#555' }}>
-              <a href="https://github.com/garethdmm" target="_blank">github</a>
-              {' · '}
-              <a href="https://www.linkedin.com/in/garethmacleod/" target="_blank">linkedin</a>
-            </p>
-          </div>
+        {/* Bio */}
+        <div style={{ marginBottom: '2.5rem' }}>
+          <p style={{ marginTop: 0 }}>
+            I've been building startups since 2010—my own and others—to varying degrees of success. Presently I'm head of engineering at <a href='https://invertbio.com/' target='_blank'>Invert</a>, where we're building AI that can solve bioprocess development.
+          </p>
+          <p>
+            My career motto is <i>do what others are not</i>.
+          </p>
+          <p style={{ fontSize: '0.88rem', fontFamily: 'system-ui, -apple-system, sans-serif', color: '#555' }}>
+            <a href="https://github.com/garethdmm" target="_blank">github</a>
+            {' · '}
+            <a href="https://www.linkedin.com/in/garethmacleod/" target="_blank">linkedin</a>
+          </p>
         </div>
 
         <hr />
