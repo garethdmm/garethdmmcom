@@ -24,6 +24,8 @@ export default function Home() {
             <a href="https://github.com/garethdmm" target="_blank">github</a>
             {' · '}
             <a href="https://www.linkedin.com/in/garethmacleod/" target="_blank">linkedin</a>
+            {' · '}
+            <a href="mailto:gareth.macleod@gmail.com">email</a>
           </p>
         </div>
 
