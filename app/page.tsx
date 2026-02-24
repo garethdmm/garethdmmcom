@@ -7,8 +7,15 @@ export default function Home() {
 
       {/* Profile */}
       <main>
+        {/* Masthead */}
+        <div style={{ marginBottom: '2rem' }}>
+          <h1 style={{ marginTop: 0, marginBottom: 0, fontSize: '1.4rem', display: 'inline' }}>Gareth MacLeod</h1>
+          <span style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontSize: '0.95rem', color: '#888', margin: '0 0.5rem' }}>—</span>
+          <span style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontSize: '0.95rem', color: '#888' }}>Founder • Engineer • Waterloo, ON</span>
+        </div>
+
+        {/* Photo + Bio */}
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem', marginBottom: '2.5rem', flexWrap: 'wrap' }}>
-          {/* Avatar */}
           <Image
             src="/me.png"
             alt="Profile photo"
@@ -16,14 +23,8 @@ export default function Home() {
             height={120}
             style={{ borderRadius: '50%', flexShrink: 0, objectFit: 'cover' }}
           />
-
-          {/* Bio */}
           <div style={{ flex: 1, minWidth: 220 }}>
-            <h1 style={{ marginTop: 0, fontSize: '1.4rem' }}>Gareth MacLeod</h1>
-            <p style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontSize: '0.88rem', color: '#555', marginBottom: '0.75rem' }}>
-              Founder • Engineer • Waterloo, ON
-            </p>
-            <p>
+            <p style={{ marginTop: 0 }}>
               I've been building startups since 2010—my own and others—to varying degrees of success. Presently I'm head of engineering at <a href='https://invertbio.com/' target='_blank'>Invert</a>, where we're building AI that can solve bioprocess development.
             </p>
             <p>
