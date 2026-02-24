@@ -36,6 +36,12 @@ export default function Home() {
           </h2>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
             <li style={{ marginBottom: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '1rem' }}>
+              <Link href="/blog/i-worked-with-a-man-who-faked-his-own-death" style={{ flex: 1 }}>
+                I worked with a man who faked his own death
+              </Link>
+              <span className="post-meta" style={{ flexShrink: 0 }}>Jun 2024</span>
+            </li>
+            <li style={{ marginBottom: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '1rem' }}>
               <Link href="/blog/how-to-feel-when-your-startup-feels-easy" style={{ flex: 1 }}>
                 How to feel when your startup feels easy
               </Link>
