@@ -5,16 +5,6 @@ export default function Home() {
   return (
     <div className="container" style={{ paddingTop: '3rem', paddingBottom: '4rem' }}>
 
-      {/* Header */}
-      <header style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: '3.5rem' }}>
-        <span style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontWeight: 600, fontSize: '1rem', color: '#1a1a1a' }}>
-          Gareth MacLeod
-        </span>
-        <nav>
-          <Link href="/blog/how-to-feel-when-your-startup-feels-easy">Writing</Link>
-        </nav>
-      </header>
-
       {/* Profile */}
       <main>
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem', marginBottom: '2.5rem', flexWrap: 'wrap' }}>
