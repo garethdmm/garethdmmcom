@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
 html {
   font-size: 18px;
   scroll-behavior: smooth;
@@ -16,15 +12,7 @@ body {
   color: #1a1a1a;
   font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 1.7;
-  margin: 0;
-  padding: 0;
   border-top: 3px solid #4a6fa5;
-}
-
-.container {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
 }
 
 a {
@@ -74,25 +62,4 @@ h1, h2, h3 {
 p {
   margin-top: 0;
   margin-bottom: 1.1rem;
-}
-
-nav {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 0.85rem;
-}
-
-nav a {
-  color: #555;
-  margin-left: 1.25rem;
-}
-
-nav a:hover {
-  color: #4a6fa5;
-  text-decoration: none;
-}
-
-.post-meta {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 0.82rem;
-  color: #888;
 }

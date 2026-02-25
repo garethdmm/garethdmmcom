@@ -6,27 +6,27 @@ export const metadata = {
 
 export default function SurvivingFiveYearsPost() {
   return (
-    <div className="container" style={{ paddingTop: '3rem', paddingBottom: '4rem' }}>
+    <div className="max-w-[680px] mx-auto px-6 pt-12 pb-16">
 
       {/* Header */}
-      <header style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: '3.5rem' }}>
-        <Link href="/" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontWeight: 600, fontSize: '1rem', color: '#1a1a1a', textDecoration: 'none' }}>
+      <header className="flex items-baseline justify-between mb-14">
+        <Link href="/" className="font-sans font-semibold text-base text-[#1a1a1a] no-underline">
           Gareth MacLeod
         </Link>
-        <nav>
-          <Link href="/">Writing</Link>
+        <nav className="font-sans text-[0.85rem]">
+          <Link href="/" className="text-[#555] ml-5 hover:text-accent hover:no-underline">Writing</Link>
         </nav>
       </header>
 
       <main>
-        <Link href="/" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontSize: '0.85rem', color: '#888', display: 'inline-block', marginBottom: '2rem' }}>
+        <Link href="/" className="font-sans text-[0.85rem] text-[#888] inline-block mb-8">
           ← Back
         </Link>
 
-        <h1 style={{ marginTop: 0, fontSize: '1.75rem', lineHeight: 1.25, marginBottom: '0.4rem' }}>
+        <h1 className="mt-0 text-[1.75rem] leading-tight mb-[0.4rem]">
           Thriving in the presence of risk — Crypto 2013–17
         </h1>
-        <p className="post-meta" style={{ marginBottom: '2rem' }}>August 2019</p>
+        <p className="font-sans text-[0.82rem] text-[#888] mb-8">August 2019</p>
 
         <hr />
 
@@ -57,29 +57,29 @@ export default function SurvivingFiveYearsPost() {
 
         <p>We put all of these fears into a threat model. A simple version of it would have looked like this:</p>
 
-        <ul style={{ paddingLeft: '1.5rem', lineHeight: 1.8 }}>
+        <ul className="pl-6 leading-[1.8]">
           <li>Exchange failures
-            <ul style={{ paddingLeft: '1.5rem' }}>
+            <ul className="pl-6">
               <li>Exchange founders go rogue and steal our money</li>
               <li>Exchange gets hacked and hackers steal our money</li>
               <li>Exchange gets shut down by authorities and funds are frozen</li>
             </ul>
           </li>
           <li>Directed Attacks
-            <ul style={{ paddingLeft: '1.5rem' }}>
+            <ul className="pl-6">
               <li>Our trading servers are hacked</li>
               <li>Our laptops or phones are hacked or stolen</li>
               <li>Founder is kidnapped/mugged and forced to hand over the keys</li>
             </ul>
           </li>
           <li>System Failures
-            <ul style={{ paddingLeft: '1.5rem' }}>
+            <ul className="pl-6">
               <li>A bug in a trading strategy makes a bunch of bad trades and loses all our money (e.g. Knight Capital)</li>
               <li>A bug in our accounting logic causes our p&amp;l numbers to be inaccurate, and lose money while we think we&apos;re making money</li>
             </ul>
           </li>
           <li>Market Risks
-            <ul style={{ paddingLeft: '1.5rem' }}>
+            <ul className="pl-6">
               <li>The price swings rapidly while we&apos;re in a big opposite position</li>
               <li>Huge price drop causes company inventory to lose value</li>
             </ul>
@@ -109,13 +109,13 @@ export default function SurvivingFiveYearsPost() {
           up with a quick summary:
         </p>
 
-        <blockquote style={{ borderLeft: '3px solid #ddd', margin: '1.75rem 0', paddingLeft: '1.25rem', color: '#444' }}>
-          <p style={{ margin: '0 0 0.75rem' }}>
+        <blockquote className="border-l-[3px] border-[#ddd] my-7 pl-5 text-[#444]">
+          <p className="mt-0 mx-0 mb-3">
             In any domain that contains extreme events, it is a mistake to bank your survival on your
             ability to precisely predict and avoid those events. Our knowledge of the world is imperfect,
             and there will always be an extreme case that is not in the historical data.
           </p>
-          <p style={{ margin: 0 }}>
+          <p className="m-0">
             Rather, we should focus our attention on the impact such events would have were they to
             happen, and structure our systems such that they can survive, absorb, and even grow in their
             presence.
@@ -131,7 +131,7 @@ export default function SurvivingFiveYearsPost() {
           had a mantra it would have been this:
         </p>
 
-        <p style={{ textAlign: 'center', fontStyle: 'italic', fontWeight: 600, margin: '2rem 0', fontSize: '1.05rem' }}>
+        <p className="text-center italic font-semibold my-8 text-[1.05rem]">
           Expect the worst to happen. Plan how to survive it.
         </p>
 
@@ -151,7 +151,7 @@ export default function SurvivingFiveYearsPost() {
 
         <p>Here are two stories about specific threats we faced and how we survived when disaster struck.</p>
 
-        <h2 style={{ fontSize: '1.2rem', marginTop: '2.5rem', marginBottom: '0.75rem' }}>
+        <h2 className="text-[1.2rem] mt-10 mb-3">
           Case Study I: The day a bug almost gave away all our money
         </h2>
 
@@ -192,7 +192,7 @@ export default function SurvivingFiveYearsPost() {
           wasn't a near miss. We were just prepared.
         </p>
 
-        <h2 style={{ fontSize: '1.2rem', marginTop: '2.5rem', marginBottom: '0.75rem' }}>
+        <h2 className="text-[1.2rem] mt-10 mb-3">
           Case Study II: Trusting people you don&apos;t trust
         </h2>
 
@@ -217,7 +217,7 @@ export default function SurvivingFiveYearsPost() {
           to trust them with any amount of money. Most of these rules were simple and easy to check, like:
         </p>
 
-        <ul style={{ paddingLeft: '1.5rem', lineHeight: 1.8 }}>
+        <ul className="pl-6 leading-[1.8]">
           <li>Must have a strong relationship with a credible bank</li>
           <li>Must have fiat currency deposits and withdrawals</li>
           <li>Must have a human contact we can get on the phone within a day</li>
@@ -275,7 +275,7 @@ export default function SurvivingFiveYearsPost() {
           likely in the dozens.
         </p>
 
-        <h2 style={{ fontSize: '1.2rem', marginTop: '2.5rem', marginBottom: '0.75rem' }}>
+        <h2 className="text-[1.2rem] mt-10 mb-3">
           Details &lt; Approach &lt; Understanding
         </h2>
 

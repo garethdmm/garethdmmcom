@@ -6,27 +6,27 @@ export const metadata = {
 
 export default function HowToFeelPost() {
   return (
-    <div className="container" style={{ paddingTop: '3rem', paddingBottom: '4rem' }}>
+    <div className="max-w-[680px] mx-auto px-6 pt-12 pb-16">
 
       {/* Header */}
-      <header style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: '3.5rem' }}>
-        <Link href="/" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontWeight: 600, fontSize: '1rem', color: '#1a1a1a', textDecoration: 'none' }}>
+      <header className="flex items-baseline justify-between mb-14">
+        <Link href="/" className="font-sans font-semibold text-base text-[#1a1a1a] no-underline">
           Gareth MacLeod
         </Link>
-        <nav>
-          <Link href="/">Writing</Link>
+        <nav className="font-sans text-[0.85rem]">
+          <Link href="/" className="text-[#555] ml-5 hover:text-accent hover:no-underline">Writing</Link>
         </nav>
       </header>
 
       <main>
-        <Link href="/" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontSize: '0.85rem', color: '#888', display: 'inline-block', marginBottom: '2rem' }}>
+        <Link href="/" className="font-sans text-[0.85rem] text-[#888] inline-block mb-8">
           ← Back
         </Link>
 
-        <h1 style={{ marginTop: 0, fontSize: '1.75rem', lineHeight: 1.25, marginBottom: '0.4rem' }}>
+        <h1 className="mt-0 text-[1.75rem] leading-tight mb-[0.4rem]">
           How to feel when your startup feels easy
         </h1>
-        <p className="post-meta" style={{ marginBottom: '2rem' }}>March 2024</p>
+        <p className="font-sans text-[0.82rem] text-[#888] mb-8">March 2024</p>
 
         <hr />
 

@@ -6,27 +6,27 @@ export const metadata = {
 
 export default function FakedDeathPost() {
   return (
-    <div className="container" style={{ paddingTop: '3rem', paddingBottom: '4rem' }}>
+    <div className="max-w-[680px] mx-auto px-6 pt-12 pb-16">
 
       {/* Header */}
-      <header style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: '3.5rem' }}>
-        <Link href="/" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontWeight: 600, fontSize: '1rem', color: '#1a1a1a', textDecoration: 'none' }}>
+      <header className="flex items-baseline justify-between mb-14">
+        <Link href="/" className="font-sans font-semibold text-base text-[#1a1a1a] no-underline">
           Gareth MacLeod
         </Link>
-        <nav>
-          <Link href="/">Writing</Link>
+        <nav className="font-sans text-[0.85rem]">
+          <Link href="/" className="text-[#555] ml-5 hover:text-accent hover:no-underline">Writing</Link>
         </nav>
       </header>
 
       <main>
-        <Link href="/" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontSize: '0.85rem', color: '#888', display: 'inline-block', marginBottom: '2rem' }}>
+        <Link href="/" className="font-sans text-[0.85rem] text-[#888] inline-block mb-8">
           ← Back
         </Link>
 
-        <h1 style={{ marginTop: 0, fontSize: '1.75rem', lineHeight: 1.25, marginBottom: '0.4rem' }}>
+        <h1 className="mt-0 text-[1.75rem] leading-tight mb-[0.4rem]">
           I worked with a man who faked his own death
         </h1>
-        <p className="post-meta" style={{ marginBottom: '2rem' }}>June 2024</p>
+        <p className="font-sans text-[0.82rem] text-[#888] mb-8">June 2024</p>
 
         <hr />
 
@@ -46,14 +46,14 @@ export default function FakedDeathPost() {
           It took a few months for the story to become comprehensible, but here it is in an abridged form, as close as I have been able to understand it.
         </p>
 
-        <ol style={{ paddingLeft: '1.5rem', lineHeight: 1.7, listStyleType: 'decimal', marginBottom: '1.1rem' }}>
-          <li style={{ marginBottom: '1rem' }}>Gerald was the only person at Quadriga who kept track of deposits, and he did not do so with any rigour. Other employees reported seeing stacks of cash labelled with post-it notes in his kitchen.</li>
-          <li style={{ marginBottom: '1rem' }}>Gerald had taken some of these deposits and spent them on himself, buy cars and planes and living a lifestyle far above his means.</li>
-          <li style={{ marginBottom: '1rem' }}>Part of the way Gerald financed this by taking customer <em>bitcoin</em> deposits, transferred them to his personal accounts, and sold them.</li>
-          <li style={{ marginBottom: '1rem' }}>This put Quadriga in a net-short position against bitcoin. They had debts denominated in bitcoin, but did not have the bitcoin assets to redeem them. This mean that in order to redeem those debts, they would have to buy bitcoin at its current market price using their fiat cash on hand.</li>
-          <li style={{ marginBottom: '1rem' }}>The price of bitcoin over these years went way up. Eventually, Quadriga was sitting on an unrealized loss of hundreds of millions of dollars.</li>
-          <li style={{ marginBottom: '1rem' }}>In the fall of 2018, Gerald married his fiancé in Canada, wrote and signed a will, and then took a trip to India.</li>
-          <li style={{ marginBottom: '1rem' }}>Weeks after the signing this will, a death certificate for Gerald is issued in Jaipur, a small city in north-west India near the border with Pakistan.</li>
+        <ol className="pl-6 leading-[1.7] list-decimal mb-[1.1rem]">
+          <li className="mb-4">Gerald was the only person at Quadriga who kept track of deposits, and he did not do so with any rigour. Other employees reported seeing stacks of cash labelled with post-it notes in his kitchen.</li>
+          <li className="mb-4">Gerald had taken some of these deposits and spent them on himself, buy cars and planes and living a lifestyle far above his means.</li>
+          <li className="mb-4">Part of the way Gerald financed this by taking customer <em>bitcoin</em> deposits, transferred them to his personal accounts, and sold them.</li>
+          <li className="mb-4">This put Quadriga in a net-short position against bitcoin. They had debts denominated in bitcoin, but did not have the bitcoin assets to redeem them. This mean that in order to redeem those debts, they would have to buy bitcoin at its current market price using their fiat cash on hand.</li>
+          <li className="mb-4">The price of bitcoin over these years went way up. Eventually, Quadriga was sitting on an unrealized loss of hundreds of millions of dollars.</li>
+          <li className="mb-4">In the fall of 2018, Gerald married his fiancé in Canada, wrote and signed a will, and then took a trip to India.</li>
+          <li className="mb-4">Weeks after the signing this will, a death certificate for Gerald is issued in Jaipur, a small city in north-west India near the border with Pakistan.</li>
           <li>Quadriga's other employees realize the severity of the situation they are in, and that they have no access to customer deposits (even the ones that still remain). They declare bankruptcy and contact the authorities.</li>
         </ol>
 
