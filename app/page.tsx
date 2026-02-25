@@ -38,6 +38,12 @@ export default function Home() {
           </h2>
           <ul className="list-none p-0 m-0">
             <li className="mb-3 flex justify-between items-baseline gap-4">
+              <Link href="/blog/its-the-money-silly" className="flex-1">
+                It's the money, silly
+              </Link>
+              <span className="font-sans text-[0.82rem] text-[#888] shrink-0">Nov 2025</span>
+            </li>
+            <li className="mb-3 flex justify-between items-baseline gap-4">
               <Link href="/blog/i-worked-with-a-man-who-faked-his-own-death" className="flex-1">
                 I worked with a man who faked his own death
               </Link>
