@@ -39,7 +39,7 @@ export default function FakedDeathPost() {
         </p>
 
         <p>
-          In short order it arrived that Gerald had disappeared, and the company did not have the assets to redeem its customer deposits.
+          It soon emerged that Gerald had disappeared, and the company did not have the assets to redeem its customer deposits.
         </p>
 
         <p>
@@ -48,25 +48,25 @@ export default function FakedDeathPost() {
 
         <ol className="pl-6 leading-[1.7] list-decimal mb-[1.1rem]">
           <li className="mb-4">Gerald was the only person at Quadriga who kept track of deposits, and he did not do so with any rigour. Other employees reported seeing stacks of cash labelled with post-it notes in his kitchen.</li>
-          <li className="mb-4">Gerald had taken some of these deposits and spent them on himself, buy cars and planes and living a lifestyle far above his means.</li>
-          <li className="mb-4">Part of the way Gerald financed this by taking customer <em>bitcoin</em> deposits, transferred them to his personal accounts, and sold them.</li>
-          <li className="mb-4">This put Quadriga in a net-short position against bitcoin. They had debts denominated in bitcoin, but did not have the bitcoin assets to redeem them. This mean that in order to redeem those debts, they would have to buy bitcoin at its current market price using their fiat cash on hand.</li>
+          <li className="mb-4">Gerald had taken some of these deposits and spent them on himself, buying cars and planes and living a lifestyle far above his means.</li>
+          <li className="mb-4">Gerald partly financed this by taking customer <em>bitcoin</em> deposits, transferring them to his personal accounts, and selling them.</li>
+          <li className="mb-4">This put Quadriga in a net-short position against bitcoin. They had debts denominated in bitcoin, but did not have the bitcoin assets to redeem them. This meant that in order to redeem those debts, they would have to buy bitcoin at its current market price using their fiat cash on hand.</li>
           <li className="mb-4">The price of bitcoin over these years went way up. Eventually, Quadriga was sitting on an unrealized loss of hundreds of millions of dollars.</li>
           <li className="mb-4">In the fall of 2018, Gerald married his fiancé in Canada, wrote and signed a will, and then took a trip to India.</li>
-          <li className="mb-4">Weeks after the signing this will, a death certificate for Gerald is issued in Jaipur, a small city in north-west India near the border with Pakistan.</li>
+          <li className="mb-4">Weeks after signing this will, a death certificate for Gerald is issued in Jaipur, a small city in north-west India near the border with Pakistan.</li>
           <li>Quadriga's other employees realize the severity of the situation they are in, and that they have no access to customer deposits (even the ones that still remain). They declare bankruptcy and contact the authorities.</li>
         </ol>
 
         <p>
-          Much has been said about this story by others. What I'd like to add starts with a simple statement: I think it probable that Gerald is still alive, living somewhere in Southeast Asia. The presence of motive, the timing of the will, and the bizarreness of his reported death, are just too much to overlook. It is easy to imagine that, once he realized the mess that he was in, he made a decision that he'd rather live in exile from western civilization than face the consequences of his actions. With millions of dollars at his disposal, it could be feasible to find a local official in one of these regions he could bribe into issuing a death certificate on his behalf. He could live off of cash for years or decades.
+          Much has been said about this story by others. What I'd like to add starts with a simple statement: I think it probable that Gerald is still alive, living somewhere in Southeast Asia. The presence of motive, the timing of the will, and the bizarreness of his reported death are too much to overlook. It is easy to imagine that, once he realized the mess that he was in, he made a decision that he'd rather live in exile from western civilization than face the consequences of his actions. With millions of dollars at his disposal, it could be feasible to find a local official in one of these regions he could bribe into issuing a death certificate on his behalf. He could live off of cash for years or decades.
         </p>
 
         <p>
-          Some investigative reporting has suggested that Gerald may have been an online con-artist before he started Quadriga. A CBC podcast describes a particular pre-crypto online community centered around creating and selling ponzi schemes to a, seemingly self-aware, community of buyers. The reporters believe that Gerald, operating under a pseudonym, was one of the members of this community, both selling, and buying, scam-assets in a sort of bizarre game of trying to be at the top of the ponzi pyramid. I don't know what is true here.
+          Some investigative reporting has suggested that Gerald may have been an online con-artist before he started Quadriga. A CBC podcast describes a particular pre-crypto online community centered around creating and selling ponzi schemes to a, seemingly self-aware, community of buyers. The reporters believe that Gerald, operating under a pseudonym, was one of the members of this community, both selling and buying scam assets in a sort of bizarre game of trying to be at the top of the ponzi pyramid. I don't know what is true here.
         </p>
 
         <p>
-          Gerald is the only person who ever successfully scammed Tinker. The early 2010s crypto world was the wild west. We put an enormous amount of energy into vetting our partners and considering how to avoid being hacked or defrauded. We had a criteria we followed religiously which determined whether we would work with a trading venue, and we rejected many over the years which we accurately judged to be untrustworthy. As I've written elsewhere, the critical element of our approach was that it did not require us to be right every time. While we did choose to trust Gerald, trust isn't binary. We kept our exposure to Quadriga limited to level I could describe as upsetting, but not disturbing. The loss that we incurred was much less than a maximal loss. Regardless, as the only man who "got us", I must tip my hat to him.
+          Gerald is the only person who ever successfully scammed Tinker. The early 2010s crypto world was the wild west. We put an enormous amount of energy into vetting our partners and considering how to avoid being hacked or defrauded. We had criteria we followed religiously which determined whether we would work with a trading venue, and we rejected many over the years which we accurately judged to be untrustworthy. As I've written elsewhere, the critical element of our approach was that it did not require us to be right every time. While we did choose to trust Gerald, trust isn't binary. We kept our exposure to Quadriga limited to a level I could describe as upsetting, but not disturbing. The loss that we incurred was much less than a maximal loss. Regardless, as the only man who "got us", I must tip my hat to him.
         </p>
 
         <p>
@@ -74,7 +74,7 @@ export default function FakedDeathPost() {
         </p>
 
         <p>
-          Despite these facts, over time, my emotions about this story have turned into bemusement, with a touch of sorrow. If the reporting about his early years are true, then Gerald was a small-time con man who tripped into an incredible, legitimate, business opportunity, but binned it — either because he didn't have the skill to manage it, or because he couldn't stop thinking about it like it was a score.
+          Despite these facts, over time, my emotions about this story have turned into bemusement, with a touch of sorrow. If the reporting about his early years is true, then Gerald was a small-time con man who tripped into an incredible, legitimate, business opportunity, but binned it — either because he didn't have the skill to manage it, or because he couldn't stop thinking about it like it was a score.
         </p>
 
         <p>
@@ -86,11 +86,11 @@ export default function FakedDeathPost() {
         </p>
 
         <p>
-          So its hard for me to see this as other than a story of a man who repeatedly turned away from redemption multiple times, and that makes me sad.
+          So it's hard for me to see this as other than a story of a man who repeatedly turned away from redemption, and that makes me sad.
         </p>
 
         <p>
-          I wonder what it feels like. Whatever our judgement of him, if he did fake his own death, that seems to imply that he considered his crimes to be extreme. Does that feel Edgar Allen Poe's tell-tale heart, where the guilt is ever-present? Or maybe like Lynch's lost highway, where the memory of your crime is like a spot in the corner of your vision that you can never blink away. Maybe he feels fine about it. That's possible too.
+          I wonder what it feels like. Whatever our judgement of him, if he did fake his own death, that seems to imply that he considered his crimes to be extreme. Does that feel like Edgar Allan Poe's tell-tale heart, where the guilt is ever-present? Or maybe like Lynch's lost highway, where the memory of your crime is like a spot in the corner of your vision that you can never blink away. Maybe he feels fine about it. That's possible too.
         </p>
 
         <p>
