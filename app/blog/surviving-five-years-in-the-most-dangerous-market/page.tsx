@@ -46,7 +46,7 @@ export default function SurvivingFiveYearsPost() {
         </p>
 
         <p>
-          The resource we had that we needed to protect were the company assets — primarily investor cash.
+          The resource we had that we needed to protect was the company assets — primarily investor cash.
           If those were lost it would be the end of the company, and potentially diminish our careers. To
           run this business we'd have to deploy most of that cash to vulnerable locations such as
           cryptocurrency exchange accounts, and at any given time much of it would be "nowhere": in transit
@@ -90,7 +90,7 @@ export default function SurvivingFiveYearsPost() {
 
         <p>
           It was clear that we'd have to get really good at thinking about risk if we were to have any
-          chance at this. Almost all of this was new to us: we'd had course-work in computer security, and
+          chance at this. Almost all of this was new to us: we'd had coursework in computer security, and
           I was tangential to the security team while I was at Facebook, but none of us had ever thought
           about price risk, handling real money with algorithms, or operating in an environment in which
           you are constantly under attack.
@@ -156,7 +156,7 @@ export default function SurvivingFiveYearsPost() {
         </h2>
 
         <p>
-          One night in 2015, I was winding-down watching Buffy the Vampire Slayer at about 2am. My phone
+          One night in 2015, I was winding down watching Buffy the Vampire Slayer at about 2am. My phone
           buzzed and I glanced over to see the home screen covered in PagerDuty alerts — I was on call that
           week. I got over to my desk quickly and saw that we were bleeding money at a disturbing rate:
           about 0.1% per minute. We'd be down 10% by the end of the hour. It was instantly clear that this
@@ -178,7 +178,7 @@ export default function SurvivingFiveYearsPost() {
           proximate cause was that we had obsessive, redundant, default-fail monitoring of every aspect of
           our trading systems. The issue that occurred was detected by three different monitoring processes
           on two different machines. If my phone had been dead or I otherwise wasn't able to catch the
-          issue, within five minutes one of my colleague's phones would have been jumping off the
+          issue, within five minutes one of my colleagues' phones would have been jumping off the
           nightstand.
         </p>
 
@@ -280,7 +280,7 @@ export default function SurvivingFiveYearsPost() {
         </h2>
 
         <p>
-          I'm sure I have four or five other case-studies I could turn into posts of their own. The
+          I'm sure I have four or five other case studies I could turn into posts of their own. The
           details are interesting because they seem to be the answer to the title "How we survived five
           years in the most dangerous market in the world." As I've hammered home already, the reason we
           got the details right was because we had the right approach. <em>Expect the worst to happen.
