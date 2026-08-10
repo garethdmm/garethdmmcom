@@ -1,0 +1,38 @@
+name: OG card freshness
+
+on:
+  pull_request:
+    paths:
+      - "app/writing/**"
+      - "lib/**"
+      - "scripts/**"
+      - "public/og/**"
+      - ".github/workflows/og-check.yml"
+  push:
+    branches: ["main"]
+    paths:
+      - "app/writing/**"
+      - "lib/**"
+      - "scripts/**"
+      - "public/og/**"
+      - ".github/workflows/og-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # The check compares post titles/dates against public/og/manifest.json;
+      # it uses only the Node standard library, so no npm ci.
+      - name: Check OG cards are current
+        run: node scripts/check-og.mjs

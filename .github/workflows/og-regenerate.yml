@@ -1,0 +1,54 @@
+name: Regenerate OG cards
+
+# Manually dispatched (Actions tab → Regenerate OG cards → choose the branch).
+# Re-renders any stale card images with headless Chrome and commits them back
+# to the branch, which un-sticks a failing "OG card freshness" check.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: og-regenerate-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # The cards are set in Georgia, which ships in Microsoft's core fonts,
+      # not on Ubuntu. Without it Chrome would silently fall back to another
+      # serif and the cards would render wrong.
+      - name: Install Georgia (MS core fonts)
+        run: |
+          echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | sudo debconf-set-selections
+          sudo apt-get update
+          sudo apt-get install -y ttf-mscorefonts-installer
+          sudo fc-cache -f
+          fc-list | grep -qi georgia
+
+      # Chrome is preinstalled on the runner; the script finds it on PATH.
+      - name: Regenerate stale cards
+        run: node scripts/generate-og.mjs
+
+      - name: Commit regenerated cards
+        run: |
+          if git diff --quiet -- public/og; then
+            echo "All cards were already current; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/og
+          git commit -m "Regenerate Open Graph cards"
+          git push
