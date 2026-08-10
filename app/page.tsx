@@ -31,7 +31,7 @@ export default function Home() {
         <div className="fleuron" aria-hidden="true">&#10086;</div>
 
         {/* Writing */}
-        <section>
+        <section className="writing">
           <h2 className="caps mt-0 mb-6 text-[0.85rem]">
             Writing
           </h2>
