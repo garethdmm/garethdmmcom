@@ -1,125 +1,71 @@
 // Generates the Open Graph card images in public/og/.
 //
-// Run `npm run og` after adding a post (add its entry to PAGES below first),
-// then commit the PNGs. Uses the installed Google Chrome headless; Georgia is
-// a system font, so no packages are needed. Cards are drawn at 1200x630 with
-// a 2x device scale factor for crisp text.
+// Run `npm run og` after adding or retitling a post, then commit the PNGs and
+// manifest.json. Card content is derived from the post pages themselves (see
+// og-pages.mjs), so there is nothing to edit here. Cards whose content is
+// unchanged since the last run are skipped; pass --force to re-render all of
+// them (e.g. after changing the card template's styling).
+//
+// Uses headless Chrome; Georgia is a system font on macOS and installable on
+// CI, so no packages are needed. Cards are drawn at 1200x630 with a 2x device
+// scale factor for crisp text.
 
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { cardHash, cardHtml, derivePages, MANIFEST_PATH, OUT_DIR, readManifest } from './og-pages.mjs';
 
-const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
-const OUT_DIR = new URL('../public/og/', import.meta.url).pathname;
-
-const PAGES = [
-  {
-    slug: 'home',
-    head: 'garethdmm.com',
-    title: 'Gareth MacLeod',
-    line: 'Founder · Engineer · Waterloo, Ontario',
-  },
-  {
-    slug: 'its-the-money-silly',
-    head: 'Gareth MacLeod',
-    title: 'It’s the money, silly',
-    line: 'November 2025',
-  },
-  {
-    slug: 'i-worked-with-a-man-who-faked-his-own-death',
-    head: 'Gareth MacLeod',
-    title: 'I worked with a man who faked his own death',
-    line: 'June 2024',
-  },
-  {
-    slug: 'how-to-feel-when-your-startup-feels-easy',
-    head: 'Gareth MacLeod',
-    title: 'How to feel when your startup feels easy',
-    line: 'March 2024',
-  },
-  {
-    slug: 'surviving-five-years-in-the-most-dangerous-market',
-    head: 'Gareth MacLeod',
-    title: 'Thriving in the presence of risk — Crypto 2013–17',
-    line: 'August 2019',
-  },
-];
-
-// The card is the opening of the essay page itself, enlarged: the letterspaced
-// running head at the top, the title and italic date at the left, and the
-// fleuron centered below them — the essay begins just under the fold.
-function card({ head, title, line }) {
-  return `<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<style>
-  html, body { margin: 0; padding: 0; }
-  body {
-    width: 1200px;
-    height: 630px;
-    background: #fffdf8;
-    color: #1a1a1a;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    box-sizing: border-box;
-    padding: 84px 110px 64px;
-    display: flex;
-    flex-direction: column;
-  }
-  .head {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    margin: 0;
-  }
-  .title {
-    font-size: 80px;
-    font-weight: normal;
-    line-height: 1.2;
-    max-width: 980px;
-    margin: auto 0 0;
-    text-wrap: balance;
-  }
-  .line {
-    font-style: italic;
-    font-size: 30px;
-    margin: 18px 0 0;
-  }
-  .fleuron {
-    color: #c0392b;
-    font-size: 28px;
-    line-height: 1;
-    text-align: center;
-    margin: auto 0 0;
-  }
-</style>
-</head>
-<body>
-  <div class="head">${head}</div>
-  <h1 class="title">${title}</h1>
-  <p class="line">${line}</p>
-  <div class="fleuron">&#10086;</div>
-</body>
-</html>`;
+function findChrome() {
+  const candidates = [
+    process.env.CHROME,
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+    '/usr/bin/google-chrome',
+    '/usr/bin/google-chrome-stable',
+    '/usr/bin/chromium-browser',
+    '/usr/bin/chromium',
+  ].filter(Boolean);
+  const chrome = candidates.find(existsSync);
+  if (!chrome) throw new Error('Chrome not found; set CHROME=/path/to/chrome');
+  return chrome;
 }
+
+const force = process.argv.includes('--force');
+const chrome = findChrome();
+const previous = readManifest();
+const manifest = {};
 
 const work = mkdtempSync(join(tmpdir(), 'og-'));
 mkdirSync(OUT_DIR, { recursive: true });
 
-for (const page of PAGES) {
+for (const page of derivePages()) {
+  const hash = cardHash(page);
+  manifest[page.slug] = { head: page.head, title: page.title, line: page.line, hash };
+  const png = join(OUT_DIR, `${page.slug}.png`);
+  if (!force && previous[page.slug]?.hash === hash && existsSync(png)) {
+    console.log(`og/${page.slug}.png (fresh, skipped)`);
+    continue;
+  }
   const htmlPath = join(work, `${page.slug}.html`);
-  writeFileSync(htmlPath, card(page));
-  execFileSync(CHROME, [
+  writeFileSync(htmlPath, cardHtml(page));
+  execFileSync(chrome, [
     '--headless',
     '--disable-gpu',
     '--hide-scrollbars',
+    // GitHub's Ubuntu runners restrict the user namespaces Chrome's sandbox
+    // needs; rendering local static HTML doesn't need a sandbox.
+    ...(process.env.CI ? ['--no-sandbox'] : []),
     '--force-device-scale-factor=2',
     '--window-size=1200,630',
-    `--screenshot=${join(OUT_DIR, `${page.slug}.png`)}`,
+    `--screenshot=${png}`,
     `file://${htmlPath}`,
   ]);
   console.log(`og/${page.slug}.png`);
 }
 
+for (const slug of Object.keys(previous)) {
+  if (!manifest[slug]) console.log(`og/${slug}.png is orphaned (post removed or renamed) — delete it`);
+}
+
+writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2) + '\n');
 rmSync(work, { recursive: true, force: true });

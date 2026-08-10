@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "og": "node scripts/generate-og.mjs",
+    "og:check": "node scripts/check-og.mjs",
     "start": "next start",
     "lint": "next lint"
   },
