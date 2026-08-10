@@ -14,15 +14,15 @@ export default function Home() {
         {/* Bio */}
         <div>
           <p className="mt-0">
-            I've been building startups since 2010—my own and others—to varying degrees of success. Presently I'm head of engineering at <a href='https://invertbio.com/' target='_blank'>Invert</a>, where we're building AI that can solve bioprocess development.
+            I've been building startups since 2010—my own and others—to varying degrees of success. Presently I'm head of engineering at <a href='https://invertbio.com/'>Invert</a>, where we're building AI that can solve bioprocess development.
           </p>
           <p>
             My career motto is <i>do what others are not</i>.
           </p>
           <p>
-            <a href="https://github.com/garethdmm" target="_blank">github</a>
+            <a href="https://github.com/garethdmm">github</a>
             {' · '}
-            <a href="https://www.linkedin.com/in/garethmacleod/" target="_blank">linkedin</a>
+            <a href="https://www.linkedin.com/in/garethmacleod/">linkedin</a>
             {' · '}
             <a href="mailto:gareth.macleod@gmail.com">email</a>
           </p>
