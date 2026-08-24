@@ -39,6 +39,12 @@ const PAGES = [
     line: 'March 2024',
   },
   {
+    slug: 'prepare-for-a-y-combinator-interview',
+    head: 'Gareth MacLeod',
+    title: 'A simple method to prepare for a Y Combinator interview',
+    line: 'October 2020',
+  },
+  {
     slug: 'surviving-five-years-in-the-most-dangerous-market',
     head: 'Gareth MacLeod',
     title: 'Thriving in the presence of risk — Crypto 2013–17',

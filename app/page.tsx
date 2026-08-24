@@ -55,6 +55,12 @@ export default function Home() {
               <span className="shrink-0">Mar 2024</span>
             </li>
             <li className="mb-3 flex justify-between items-baseline gap-6">
+              <Link href="/writing/prepare-for-a-y-combinator-interview" className="flex-1">
+                A simple method to prepare for a Y Combinator interview
+              </Link>
+              <span className="shrink-0">Oct 2020</span>
+            </li>
+            <li className="mb-3 flex justify-between items-baseline gap-6">
               <Link href="/writing/surviving-five-years-in-the-most-dangerous-market" className="flex-1">
                 Thriving in the presence of risk — Crypto 2013–17
               </Link>
